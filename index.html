@@ -169,19 +169,6 @@
             maxNativeZoom: 22
         });
         layer_GoogleSatellite_1;
-        map.createPane('pane_Positron_2');
-        map.getPane('pane_Positron_2').style.zIndex = 402;
-        var layer_Positron_2 = L.tileLayer('https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-            pane: 'pane_Positron_2',
-            opacity: 1.0,
-            attribution: '<a href="https://cartodb.com/basemaps/">Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.</a>',
-            minZoom: 5,
-            maxZoom: 20,
-            minNativeZoom: 0,
-            maxNativeZoom: 20
-        });
-        layer_Positron_2;
-        map.addLayer(layer_Positron_2);
         map.createPane('pane_OpenStreetMap_3');
         map.getPane('pane_OpenStreetMap_3').style.zIndex = 403;
         var layer_OpenStreetMap_3 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1487,7 +1474,6 @@
         var baseMaps = {};
         var overlaysTree = [
             { label: 'OpenStreetMap', layer: layer_OpenStreetMap_3 },
-            { label: 'Positron', layer: layer_Positron_2 },
             { label: 'Google Satellite', layer: layer_GoogleSatellite_1 },
             { label: 'ESRI Satellite', layer: layer_ESRISatellite_0 },
             { label: '<img src="legend/Localits_32.png" /> Localités', layer: cluster_Localits_32 },
@@ -1544,6 +1530,7 @@
             { label: '<img src="legend/FortclassedAmakpakp_5.png" /> Forêt classée d\'Amakpakpé', layer: layer_FortclassedAmakpakp_5 },
             { label: '<img src="legend/Rgion_4.png" /> Région', layer: layer_Rgion_4 },
         ];
+
         var lay = L.control.layers.tree(null, overlaysTree, {
             //namedToggle: true,
             // selectorBack: false,
